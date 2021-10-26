@@ -13,6 +13,13 @@ interface IUserResponse {
     name: string
 }
 
+/**
+ * Receber code (string)
+ * Recuperar o access_token do github, usar para recuperar as info do user
+ * Verificar se user existe na db. Se NÃO, adicionar
+ * Retorna um jwt com as info do user
+ */
+
 class AuthenticateUserService {
     async execute(code: string) {
         

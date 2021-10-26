@@ -11,6 +11,7 @@ class AuthenticateUserController {
         //Instanciate new Service
         const service = new AuthenticateUserService()
         
+        //Execute
         try {
             const result = await service.execute(code)
             return response.json(result)

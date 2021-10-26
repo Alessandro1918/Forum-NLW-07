@@ -36,7 +36,7 @@ export function ensureAuth(request: Request, response: Response, next: NextFunct
          *      sub: '3f6f605d-e194-4a0b-af07-bf0b7858466e'
          * }
          */
-        request.user_id = sub       //add this to the req so the Controller can use it after
+        request.user_id = sub       //add this to the req so the Controllers can use it after
         return next()
     } catch(err) {
         return response.status(401).json({errorCode: "token is expired"})

@@ -1,6 +1,8 @@
 import { Router } from 'express'
 import { AuthenticateUserController } from './controllers/AuthenticateUserController'
 import { CreateMessageController } from './controllers/CreateMessageController'
+import { Get3LastMessagesController } from './controllers/Get3LastMessagesController'
+import { GetUserProfileController } from './controllers/GetUserProfileController'
 import { ensureAuth } from './middlewares/ensureAuth'
 
 const router = Router()
@@ -18,20 +20,20 @@ router.get("/signin/callback", (req, res) => {
     return res.json(code)
 })
 
-//Make a POST req to baseUrl/authenticate with body: {"code": "b7b7dc2c8b78c63378da"}
-/**
- * Receber code (string)
- * Recuperar o access_token do github, usar para recuperar as info do user
- * Verificar se user existe na db. Se NÃO, adicionar
- * Retorna um jwt com as info do user
- */
+//Make a POST req to baseUrl/authenticate
+//with body: {"code": "b7b7dc2c8b78c63378da"}
 router.post("/authenticate", new AuthenticateUserController().handle)
 
-/**
- * Make a POST req to baseUrl/messages
- * with Body: {"message": "..."}
- * and Auth: Bearer, with token: jwt from "/authenticate"
- */
+//Make a POST req to baseUrl/messages
+//with Body: {"message": "..."}
+//and Auth: Bearer, with token: jwt from "/authenticate"
 router.post("/messages", ensureAuth, new CreateMessageController().handle)
+
+//Make a GET req to baseUrl/messages/last3
+router.get("/messages/last3", new Get3LastMessagesController().handle)
+
+//Make a GET req to baseUrl/userProfile
+//with Auth: Bearer, and token: jwt from "/authenticate"
+router.get("/userProfile", ensureAuth, new GetUserProfileController().handle)
 
 export { router }

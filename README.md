@@ -32,10 +32,10 @@ Um forum com atualização instantânea de novas mensagens!
   
   # Routes:
   # Check usage and comments at file src/routes.ts
-  $ GET  http://localhost:3333/github           // Get Github authorization code
-  $ POST http://localhost:3333/authenticate     // Generates a JSON Web Token (jwt) with the user's info
-  $ POST http://localhost:3333/messages         // Post a message in the forum (save it in the db)
-  $ GET  http://localhost:3333/messages/last3   // Get the user's 3 last messages
-  $ GET  http://localhost:3333/userProfile      // Get the user's info
+  $ GET  http://localhost:3333/github           # Get Github authorization code
+  $ POST http://localhost:3333/authenticate     # Generates a JSON Web Token (jwt) with the user's info
+  $ POST http://localhost:3333/messages         # Post a message in the forum (save it in the db)
+  $ GET  http://localhost:3333/messages/last3   # Get the user's 3 last messages
+  $ GET  http://localhost:3333/userProfile      # Get the user's info
 
 ```

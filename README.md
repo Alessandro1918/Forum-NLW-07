@@ -3,12 +3,17 @@
 ## 🚀 Projeto
 Um forum com atualização instantânea de novas mensagens!
 
+<p align="center">
+    <img src="github/web.png" alt="main page" title="Main page" width="75%"/>
+</p>
+
 - 📊 Backend:    Done! ✅
 - 🖼️ Frontend:   🚧 Em construção 🚧
 
 ## 🛠️ Tecnologias
 - [Node.js](https://nodejs.org/en/)
 - [JWT](https://jwt.io) (Autenticação de usuários por meio de tokens assinados pelo servidor da API)
+- [Github login](https://github.com/settings/developers) (Faça login na plataforma usando sua conta do Github)
 
 ## 🗂️ Utilização
 

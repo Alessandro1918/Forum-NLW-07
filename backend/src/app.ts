@@ -36,7 +36,8 @@ io.on("connection", socket => {
 //export { httpServer, io }
 
 //V2 alternativo: Ou posso deixar tudo junto no app.ts mesmo
-httpServer.listen(3333, () => {
-    console.log("Server is running on PORT 3333")
+const PORT = 3333
+httpServer.listen(PORT, () => {
+    console.log(`Server is running on PORT ${PORT}`)
 })
 export { io }

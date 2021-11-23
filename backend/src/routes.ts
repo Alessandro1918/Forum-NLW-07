@@ -8,7 +8,7 @@ import { ensureAuth } from './middlewares/ensureAuth'
 const router = Router()
 
 
-//Get Github authorization code
+//Get Github authorization code - The same way the <a> from the LoginBox from the frontend
 //Make a GET req to baseUrl/github
 //(Tentando entrar em baseUrl/github, 
 //ele vai redirecionar para a página de Autorização)

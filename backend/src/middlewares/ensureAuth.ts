@@ -24,7 +24,8 @@ export function ensureAuth(request: Request, response: Response, next: NextFunct
         const { sub } = verify(token, process.env.JWT_SECRET) as IPayload
         /**
          * token, with: user, iat (Issued At Time), exp (Expiration), 
-         * and sub (Subject), to which I passed the value user_id @ AuthenticateUserService file
+         * and sub (Subject), to which I passed the value user_id
+         * when I signed the token @ AuthenticateUserService.ts, line 99
          * {
          *      user: {
          *          name: 'Alessandro B. Cesta',

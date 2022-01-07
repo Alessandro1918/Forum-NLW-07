@@ -58,7 +58,7 @@ export function AuthProvider(props: AuthProvider) {
             //axios headers:
             //v1 - AuthenticateUserService.ts, line 56
             //v2:
-            api. defaults.headers.common.authorization = `Bearer ${token}`
+            api.defaults.headers.common.authorization = `Bearer ${token}`
 
             api.get<User>('userProfile').then(response => {
                 //console.log(response.data)
